@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mac KeyBoard</title>
+    <style>
+      * {
+        font-family: sans-serif;
+        margin: 0;
+      }
+
+      body{
+        background-color: antiquewhite;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      section {
+        background-color: aliceblue;
+        box-shadow: 2px 2px 5px black;
+        border-radius: 7px;
+        padding: 10px;
+        margin: auto;
+        display: grid;
+        grid-template-rows: repeat(5, 80px);
+        gap: 10px;
+        width: 1400px;
+      }
+
+      #row-1 {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(13, 1fr) 1.5fr;
+      }
+
+      #row-2 {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1.5fr repeat(13, 1fr);
+      }
+
+      #row-3 {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1.7fr repeat(11, 1fr) 1.7fr;
+      }
+
+      #row-4 {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 2.2fr repeat(10, 1fr) 2.2fr;
+      }
+
+      #row-5 {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, 0.9fr) 1.12fr 5fr 1.2fr 0.9fr 2.8fr;
+      }
+
+      .key {
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-weight: 300;
+        font-size: 28px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px rgb(70, 70, 70);
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .multi-chars{
+        font-size: 24px;
+      }
+
+      .modifier-key {
+        font-size: 18px;
+        align-items: start;
+        justify-content: end;
+      }
+
+      .right-key {
+        align-items: end;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>KEYBOARD STRUCTURE</h1>
+    <section>
+      <div id="row-1">
+        <div class="key multi-chars">
+          <p>~</p>
+          <p>`</p>
+        </div>
+        <div class="key  multi-chars">
+          <p>!</p>
+          <p>1</p>
+        </div>
+        <div class="key multi-chars">
+          <p>@</p>
+          <p>2</p>
+        </div>
+        <div class="key multi-chars">
+          <p>#</p>
+          <p>3</p>
+        </div>
+        <div class="key multi-chars">
+          <p>$</p>
+          <p>4</p>
+        </div>
+        <div class="key multi-chars">
+          <p>%</p>
+          <p>5</p>
+        </div>
+        <div class="key multi-chars">
+          <p>^</p>
+          <p>6</p>
+        </div>
+        <div class="key multi-chars">
+          <p>&</p>
+          <p>7</p>
+        </div>
+        <div class="key multi-chars">
+          <p>*</p>
+          <p>8</p>
+        </div>
+        <div class="key multi-chars">
+          <p>(</p>
+          <p>9</p>
+        </div>
+        <div class="key multi-chars">
+          <p>)</p>
+          <p>0</p>
+        </div>
+        <div class="key multi-chars">
+          <p>_</p>
+          <p>-</p>
+        </div>
+        <div class="key multi-chars">
+          <p>+</p>
+          <p>=</p>
+        </div>
+        <div class="key modifier-key right-key">
+          <p>delete</p>
+        </div>
+      </div>
+
+      <div id="row-2">
+        <div class="key modifier-key">tab</div>
+        <div class="key letter-key">Q</div>
+        <div class="key letter-key">W</div>
+        <div class="key letter-key">E</div>
+        <div class="key letter-key">R</div>
+        <div class="key letter-key">T</div>
+        <div class="key letter-key">Y</div>
+        <div class="key letter-key">U</div>
+        <div class="key letter-key">I</div>
+        <div class="key letter-key">O</div>
+        <div class="key letter-key">P</div>
+        <div class="key multi-chars">
+          <p>{</p>
+          <p>[</p>
+        </div>
+        <div class="key multi-chars">
+          <p>}</p>
+          <p>]</p>
+        </div>
+        <div class="key multi-chars">
+          <p>|</p>
+          <p>\</p>
+        </div>
+      </div>
+
+      <div id="row-3">
+        <div class="key modifier-key">caps lock</div>
+        <div class="key letter-key">A</div>
+        <div class="key letter-key">S</div>
+        <div class="key letter-key">D</div>
+        <div class="key letter-key">F</div>
+        <div class="key letter-key">G</div>
+        <div class="key letter-key">H</div>
+        <div class="key letter-key">J</div>
+        <div class="key letter-key">K</div>
+        <div class="key letter-key">L</div>
+        <div class="key multi-chars">
+          <p>:</p>
+          <p>;</p>
+        </div>
+        <div class="key multi-chars">
+          <p>"</p>
+          <p>'</p>
+        </div>
+        <div class="key modifier-key right-key">return</div>
+      </div>
+      <div id="row-4">
+        <div class="key modifier-key">shift</div>
+        <div class="key letter-key">Z</div>
+        <div class="key letter-key">X</div>
+        <div class="key letter-key">C</div>
+        <div class="key letter-key">V</div>
+        <div class="key letter-key">B</div>
+        <div class="key letter-key">N</div>
+        <div class="key letter-key">M</div>
+        <div class="key multi-chars">
+          <p><</p>
+          <p>,</p>
+        </div>
+        <div class="key multi-chars">
+          <p>></p>
+          <p>.</p>
+        </div>
+        <div class="key multi-chars">
+          <p>?</p>
+          <p>/</p>
+        </div>
+        <div class="key modifier-key right-key">shift</div>
+      </div>
+      <div id="row-5">
+        <div class="key modifier-key">fn</div>
+        <div class="key modifier-key">control</div>
+        <div class="key modifier-key">option</div>
+        <div class="key modifier-key">command</div>
+        <div class="key"></div>
+        <div class="key modifier-key">command</div>
+        <div class="key modifier-key">option</div>
+        <div style="padding-top: 10px;">
+          <div class="key" style="width: 27%;height: 34%; font-size: 20px;margin: 0 auto 3px;">^</div>
+
+          <div style="display: flex; justify-content: space-between">
+            <div class="key" style="width: 27%; height: 100%;font-size: 20px;"><</div>
+            <div class="key" style="width: 27%; height: 100%; font-size: 20px;"">></div>
+            <div class="key" style="width: 27%; height: 100%; font-size: 20px;"">></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
