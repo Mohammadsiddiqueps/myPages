@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      h1 {
+        background-color: #91a4bb; /* Vibrant blue */
+        padding: 25px;
+        text-align: center;
+        font-size: 40px;
+        letter-spacing: 5px;
+        color: white;
+        text-transform: uppercase;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        font-size: 38px;
+        text-align: center;
+        margin-bottom: 25px;
+        font-weight: bold;
+        color: #333;
+        text-transform: capitalize;
+        letter-spacing: 3px;
+      }
+
+      article {
+        background-color: #f1f1f1;
+        padding: 20px;
+        overflow: hidden;
+      }
+
+      article:nth-child(2n) {
+        background-color: #e7f3fe; 
+
+        figure {
+          float: right;
+        }
+      }
+
+      figure {
+        margin: 20px;
+        float: left;
+        width: 60%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+      }
+
+      img {
+        border-radius: 20px;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      figcaption {
+        text-align: center;
+        font-size: 18px;
+        font-style: italic;
+        color: #777;
+        margin-top: 10px;
+      }
+
+      .info {
+        width: 30%;
+        text-align: center;
+        margin: 50px;
+        float: left;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .info h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .info ul {
+        list-style-type: none;
+
+        color: #444;
+      }
+
+      .info li {
+        background-color: #f7f7f7;
+        color: #555;
+        padding: 16px;
+        font-size: 18px;
+        color: #333;
+        margin: 20px;
+        border-radius: 10px;
+      }
+      .info li:hover {
+        background-color: #f1f1f1;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .info a {
+        font-size: 28px;
+        
+        text-decoration: none;
+        padding: 10px 50px;
+        border-radius: 20px;
+        color: rgb(235, 229, 229);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #4e84c4;
+        color: #fff;
+      }
+      a:hover {
+        background-color: #355e87; /* Darker blue on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My pages</h1>
+    </header>
+    <article>
+      <h2>Product Cards</h2>
+      <figure>
+        <img src="images/Screenshot 2025-02-14 at 11.13.19 PM.png" alt="" />
+        <figcaption>Screen shot clip</figcaption>
+      </figure>
+
+      <div class="info">
+        <h3>What I learned:</h3>
+        <ul>
+          <li>Created responsive product cards using HTML and CSS.</li>
+          <li>Used `float` to align content side by side.</li>
+          <li>Styled images and added border-radius for a clean design.</li>
+          <li>Applied clearfix technique to avoid layout issues.</li>
+          <li>
+            Explored different ways to position elements within a container.
+          </li>
+        </ul>
+        <a href="">Visit Now</a>
+      </div>
+    </article>
+
+    <article>
+      <h2>Newspaper Clips</h2>
+      <figure>
+        <img src="images/Screenshot 2025-02-14 at 11.13.19 PM.png" alt="" />
+        <figcaption>Screen shot clip</figcaption>
+      </figure>
+
+      <div class="info">
+        <h3>What I learned:</h3>
+        <ul>
+          <li>Created responsive product cards using HTML and CSS.</li>
+          <li>Used `float` to align content side by side.</li>
+          <li>Styled images and added border-radius for a clean design.</li>
+          <li>Applied clearfix technique to avoid layout issues.</li>
+          <li>
+            Explored different ways to position elements within a container.
+          </li>
+        </ul>
+        <a href="">Visit Now</a>
+      </div>
+    </article>
+  </body>
+</html>
