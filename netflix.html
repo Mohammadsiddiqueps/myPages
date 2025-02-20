@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      * {
+        margin: 0;
+        font-family: sans-serif;
+        padding: 0;
+      }
+
+      nav {
+        border-bottom: 1px solid;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+      }
+
+      #logo {
+        font-size: 35px;
+        color: red;
+        font-weight: 700;
+      }
+
+      #sign-button {
+        font-size: 23px;
+        color: rgb(78, 78, 78);
+      }
+
+      main {
+        width: 65%;
+        margin: auto;
+        padding: 30px 0;
+      }
+
+      #step-info {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: rgb(58, 53, 53);
+      }
+
+      #page-head {
+        color: rgb(60, 60, 60);
+        font-size: 30px;
+        font-weight: 500;
+      }
+
+      #plans-grid {
+        margin: 20px 0 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 20px;
+      }
+
+      .plans {
+        border: 0.5px solid rgb(81, 81, 81);
+        border-radius: 15px;
+        padding: 9px;
+        height: 600px;
+      }
+
+      .plan-header {
+        border-radius: 15px;
+        height: 60px;
+        color: white;
+        padding: 15px;
+
+        h4 {
+          font-size: 20px;
+          font-weight: 550;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+
+      .plan-info {
+        list-style-type: none;
+        margin: 18px 16px;
+      }
+
+      #price-tag {
+        font-weight: 570;
+        font-size: 16px;
+      }
+
+      .plan-data {
+        padding: 12.5px 0px;
+        &:not(:last-child) {
+          border-bottom: 0.5px solid rgb(81, 81, 81);
+        }
+
+        p {
+          font-size: 0.875rem;
+          color: rgb(118, 118, 118);
+        }
+
+        span {
+          color: rgb(77, 75, 75);
+          font-size: 15px;
+        }
+      }
+
+      footer {
+        width: 100%;
+      }
+
+      .footer-info {
+        color: grey;
+        font-size: 14px;
+        margin: 10px;
+      }
+
+      #span-link {
+        color: blue;
+      }
+
+      #next-btn {
+        background-color: red;
+        text-align: center;
+        color: white;
+        width: 40%;
+        display: block;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 25px;
+        margin: 15px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a id="logo">NETFLIX</a>
+      <a id="sign-button">Sign In</a>
+    </nav>
+
+    <main>
+      <header>
+        <p id="step-info">STEP 1 OF 4</p>
+        <h2 id="page-head">Choose the plan that’s right for you</h2>
+      </header>
+      <section id="plans-grid">
+        <article class="plans">
+          <div
+            class="plan-header"
+            style="
+              background: linear-gradient(
+                45deg,
+                rgb(9, 37, 101),
+                rgb(74, 94, 222)
+              );
+            "
+          >
+            <h4>Mobile</h4>
+            <blockquote>480p</blockquote>
+          </div>
+          <ul class="plan-info">
+            <li class="plan-data">
+              <div>
+                <p>Monthly price</p>
+                <span id="price-tag">&#8377; 149</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Video and sound quality</p>
+                <span>Fair</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Resolution</p>
+                <span>480p</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Supported devices</p>
+                <span>Mobile phone, tablet</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Devices your household can watch at the same time</p>
+                <span>1</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Download devices</p>
+                <span>1</span>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <article class="plans">
+          <div
+            class="plan-header"
+            style="
+              background: linear-gradient(
+                45deg,
+                rgb(16, 52, 199),
+                rgb(85, 30, 224)
+              );
+            "
+          >
+            <h4>Basic</h4>
+            <blockquote>720p</blockquote>
+          </div>
+          <ul class="plan-info">
+            <li class="plan-data">
+              <div>
+                <p>Monthly price</p>
+                <span id="price-tag">&#8377; 199</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Video and sound quality</p>
+                <span>Good</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Resolution</p>
+                <span>720p (HD)</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Supported devices</p>
+                <span>TV, computer, mobile phone, tablet</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Devices your household can watch at the same time</p>
+                <span>1</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Download devices</p>
+                <span>1</span>
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="plans">
+          <div
+            class="plan-header"
+            style="
+              background: linear-gradient(
+                45deg,
+                rgb(51, 36, 215),
+                rgb(135, 28, 223)
+              );
+            "
+          >
+            <h4>Standard</h4>
+            <blockquote>1080p</blockquote>
+          </div>
+          <ul class="plan-info">
+            <li class="plan-data">
+              <div>
+                <p>Monthly price</p>
+                <span id="price-tag">&#8377; 499</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Video and sound quality</p>
+                <span>Great</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Resolution</p>
+                <span>1080p (Full HD)</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Supported devices</p>
+                <span>TV, computer, mobile phone, tablet</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Devices your household can watch at the same time</p>
+                <span>2</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Download devices</p>
+                <span>2</span>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <article class="plans">
+          <div
+            class="plan-header"
+            style="
+              background: linear-gradient(
+                45deg,
+                rgb(96, 19, 220),
+                rgb(152, 11, 25)
+
+              );
+            "
+          >
+            <h4>Premium</h4>
+            <blockquote>4K + HDR</blockquote>
+          </div>
+          <ul class="plan-info">
+            <li class="plan-data">
+              <div>
+                <p>Monthly price</p>
+                <span id="price-tag">&#8377; 649</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Video and sound quality</p>
+                <span>Best</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Resolution</p>
+                <span>4K (Ultra HD) + HDR</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Spatial audio (immersive sound)</p>
+                <span>Included</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Supported devices</p>
+                <span>TV, computer, mobile phone, tablet</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Devices your household can watch at the same time</p>
+                <span>4</span>
+              </div>
+            </li>
+
+            <li class="plan-data">
+              <div>
+                <p>Download devices</p>
+                <span>6</span>
+              </div>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <footer>
+        <p class="footer-info">
+          HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject
+          to your internet service and device capabilities. Not all content is
+          available in all resolutions. See our
+          <span id="span-link">Terms of Use </span>for more details.
+        </p>
+        <p class="footer-info">
+          Only people who live with you may use your account. Watch on 4
+          different devices at the same time with Premium, 2 with Standard, and
+          1 with Basic and Mobile.
+        </p>
+        <p class="footer-info">
+          Live events are included with any Netflix plan and contain adverts.
+        </p>
+
+        <a href="#" id="next-btn">Next</a>
+      </footer>
+    </main>
+  </body>
+</html>
