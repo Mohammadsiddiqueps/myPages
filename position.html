@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+
+      #nav {
+        box-shadow: 1px 1px 5px black;
+        height: 75px;
+        border-radius: 4px;
+        color: rgb(73, 73, 73);
+        margin: 20px;
+        background-color: rgb(233, 231, 231);
+        padding-left: 8%;
+      }
+
+      .nav-links {
+        list-style: none;
+        float: left;
+        margin: 10px;
+        padding: 10px;
+        font-size: 28px;
+        position: relative;
+        width: 200px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(229, 229, 229);
+          box-shadow: 1px 1px 3px black;
+
+          .dropdown-content {
+            display: block;
+          }
+        }
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        background-color: lightgray;
+        box-shadow: 1px 1px 3px black;
+      }
+
+      .drop-list {
+        margin: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        padding-bottom: 10px;
+        list-style: none;
+        position: relative;
+        top: auto;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid black;
+        }
+
+        &:hover {
+          color: gray;
+
+          #dropdown-second {
+            display: block;
+          }
+        }
+      }
+
+      #dropdown-second {
+        display: none;
+        position: absolute;
+        width: 140%;
+        left: 100%;
+        top: -30%;
+        background-color: lightgray;
+        padding: 15px;
+        text-align: justify;
+        box-shadow: 1px 1px 3px black;
+
+        >p{
+          color: rgb(66, 65, 65);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul id="nav">
+        <li class="nav-links">
+          Parks & Garden
+          <div class="dropdown-content">
+            <ul>
+              <li class="drop-list">Cubbon Park</li>
+              <li class="drop-list">Lal Bagh Park</li>
+              <li class="drop-list">
+                Heble Park
+                <!-- <span id="drop">> </span> -->
+
+                <div id="dropdown-second">
+                  <p>
+                    The park’s premises also include a library with a collection
+                    of books for all ages; membership is free and the books come
+                    from resident donations. One can find a large playground and
+                    fountain, an open-air gym and a pebble park, too.
+                  </p>
+                </div>
+              </li>
+              <li class="drop-list">Udupi Garden Park</li>
+              <li class="drop-list">Bugle Rock Park</li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-links">
+          IT Parks
+          <div class="dropdown-content">
+            <ul>
+              <li class="drop-list">Bagmane Park</li>
+              <li class="drop-list">International Tech Park Bangalore</li>
+              <li class="drop-list">Manyata Tech Park</li>
+              <li class="drop-list">Divyasree Technopolis</li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-links">
+          Heritage
+          <div class="dropdown-content">
+            <ul>
+              <li class="drop-list">Bengaluru Fort</li>
+              <li class="drop-list">Model Village</li>
+              <li class="drop-list">Bengaluru Palace</li>
+              <li class="drop-list">Kempegowda Museum</li>
+              <li class="drop-list">Begur Fort</li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-links">
+          Thrill
+          <div class="dropdown-content">
+            <ul>
+              <li class="drop-list">Snow City Bengaluru</li>
+              <li class="drop-list">Bangalore AdvenTuRers</li>
+              <li class="drop-list">WonderLa</li>
+              <li class="drop-list">Fantasy Park</li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-links">
+          Streets
+
+          <div class="dropdown-content">
+            <ul>
+              <li class="drop-list">Commercial Street</li>
+              <li class="drop-list">Church Street</li>
+              <li class="drop-list">Jay Nagar Street</li>
+              <li class="drop-list">Maruthi Nagar</li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-links">Foods & Pubs</li>
+      </ul>
+    </nav>
+  </body>
+</html>
