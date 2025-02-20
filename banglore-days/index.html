@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bangalore</title>
+
+    <style>
+      * {
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      :root {
+        --main-bg-color: brown;
+        --side-bar-bg-color: #dbdeba;
+        --nav-bar-bg-colr: #d3e3ae;
+        --nav-bar-color: #4b4d4b;
+        --bg-color: #e3e8bd;
+        --bg-color2: #e7f2d5;
+        --h2-color: #354d2d;
+        --p-color: #175f09;
+      }
+
+      #navbar {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100px;
+        background-color: var(--nav-bar-bg-colr);
+      }
+
+      .navlinks {
+        color: var(--nav-bar-color);
+        font-size: 28px;
+        font-weight: 500;
+        text-decoration: none;
+        position: relative;
+      }
+
+      .navlinks::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: #175228;
+        transition: width 2s ease;
+      }
+
+      .navlinks:hover {
+        color: #175228;
+
+        &::after {
+          width: 100%;
+        }
+      }
+
+      main {
+        background-color: var(--bg-color2);
+      }
+
+      #intro-banner {
+        padding: 50px;
+        text-align: center;
+
+        h2 {
+          color: var(--h2-color);
+          font-size: 30px;
+        }
+
+        article {
+          margin: 2% 7% 0 7%;
+        }
+      }
+
+      #intro-banner > img {
+        border-radius: 10px;
+        width: 100%;
+        height: 650px;
+      }
+
+      #intro-quotes {
+        color: var(--p-color);
+        font-size: 25px;
+        font-weight: 400;
+        margin-top: 20px;
+      }
+
+      .navtargets {
+        background-color: var(--bg-color);
+        text-align: center;
+        padding: 18px;
+
+        h2 {
+          color: #2c3e50;
+          font-size: 35px;
+          text-decoration: underline dashed rgb(25, 25, 25);
+        }
+      }
+
+      .cards {
+        width: 22%;
+        text-align: center;
+        background-color: rgba(115, 114, 114, 0.2);
+        box-shadow: 1px 1px 10px rgb(108, 107, 107);
+        border-radius: 5px;
+        padding: 40px;
+
+        h3 {
+          font-size: 26px;
+          color: var(--h2-color);
+          margin: 20px;
+        }
+
+        img {
+          border-radius: 5px;
+          height: 250px;
+          width: 100%;
+        }
+
+        p {
+          color: #5c7856;
+          text-align: justify;
+          font-size: 20px;
+          margin-bottom: 8%;
+        }
+
+        .visit-button {
+          background-color: #157103;
+          width: 50%;
+          margin: auto;
+          display: block;
+          color: #d3e3ae;
+          text-decoration: none;
+          font-size: 20px;
+          font-weight: 500;
+          padding: 10px;
+          border-radius: 5px;
+        }
+
+        .visit-button:hover {
+          background-color: #d3e3ae;
+          color: #4f9b40;
+          box-shadow: 1px 1px 10px rgb(108, 107, 107);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <aside style="display: flex">
+      <section>
+        <nav id="navbar">
+          <a href="#" class="navlinks">Gardens & Lakes </a>
+          <a href="#" class="navlinks">Adventure</a>
+          <a href="#" class="navlinks">Historical Sites </a>
+          <a href="#" class="navlinks"> Tech Parks</a>
+          <a href="#" class="navlinks">Weekend Getaways </a>
+          <a href="#" class="navlinks">Recreation & Sports</a>
+        </nav>
+
+        <main>
+          <section id="intro-banner">
+            <img src="images/welcome_banner.webp" alt="intro-banner" />
+
+            <article>
+              <h2>Welcome to Bangalore Explorer! 🌆🌿</h2>
+
+              <p id="intro-quotes">
+                Discover the vibrant charm of Bangalore, where modern
+                skyscrapers meet lush green gardens and rich heritage. Whether
+                you're seeking thrilling adventures, serene getaways, or
+                cultural landmarks, this city has something for everyone.
+                Explore top destinations, hidden gems, and must-visit spots—all
+                in one place. Get ready to experience Bangalore like never
+                before! ✨🚀
+              </p>
+            </article>
+          </section>
+
+          <section class="navtargets">
+            <h2>Affordable</h2>
+            <div style="display: flex; justify-content: space-evenly; margin-top: 40px;">
+              <article class="cards">
+                <img
+                  src="https://lh3.googleusercontent.com/p/AF1QipPIRZTX1cUpsctw9N-I6WKLJxrjTza4D1v5HE_u=s1360-w1360-h1020-rw"
+                  alt=""
+                />
+
+                <h3>LalBagh Botanical Garden</h3>
+                <p>
+                  Lalbagh Botanical Garden or simply Lalbagh, is a botanical
+                  garden in Bangalore, India, with an over 200-year history.
+                  First planned and laid out during the dalavaiship of King
+                  Hyder Ali, the garden was later managed under numerous British
+                  superintendents before Indian Independence.
+                </p>
+
+                <a
+                  class="visit-button"
+                  href="https://www.google.com/search?q=lalBagh+botanical+garden"
+                  >Visit Now</a
+                >
+              </article>
+
+              <article class="cards">
+                <img
+                  src="https://lh3.googleusercontent.com/p/AF1QipPIRZTX1cUpsctw9N-I6WKLJxrjTza4D1v5HE_u=s1360-w1360-h1020-rw"
+                  alt=""
+                />
+
+                <h3>LalBagh Botanical Garden</h3>
+                <p>
+                  Lalbagh Botanical Garden or simply Lalbagh, is a botanical
+                  garden in Bangalore, India, with an over 200-year history.
+                  First planned and laid out during the dalavaiship of King
+                  Hyder Ali, the garden was later managed under numerous British
+                  superintendents before Indian Independence.
+                </p>
+
+                <a
+                  class="visit-button"
+                  href="https://www.google.com/search?q=lalBagh+botanical+garden"
+                  >Visit Now</a
+                >
+              </article>
+
+              <article class="cards">
+                <img
+                  src="https://lh3.googleusercontent.com/p/AF1QipPIRZTX1cUpsctw9N-I6WKLJxrjTza4D1v5HE_u=s1360-w1360-h1020-rw"
+                  alt=""
+                />
+
+                <h3>LalBagh Botanical Garden</h3>
+                <p>
+                  Lalbagh Botanical Garden or simply Lalbagh, is a botanical
+                  garden in Bangalore, India, with an over 200-year history.
+                  First planned and laid out during the dalavaiship of King
+                  Hyder Ali, the garden was later managed under numerous British
+                  superintendents before Indian Independence.
+                </p>
+
+                <a
+                  class="visit-button"
+                  href="https://www.google.com/search?q=lalBagh+botanical+garden"
+                  >Visit Now</a
+                >
+              </article>
+            </div>
+          </section>
+        </main>
+      </section>
+    </aside>
+  </body>
+</html>
