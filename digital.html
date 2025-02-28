@@ -17,7 +17,7 @@
         background-color: rgb(191, 191, 191);
       }
       .dot {
-        background-color: rgb(34, 36, 36);
+        background-color: rgb(74, 75, 75);
         width: 30px;
         height: 30px;
         border-radius: 50%;
@@ -32,6 +32,7 @@
       }
 
       .number-column {
+        position: relative;
         background-color: rgb(205, 205, 205);
         color: rgb(45, 47, 46);
         font-size: 165px;
@@ -50,25 +51,61 @@
         flex-direction: column;
         justify-content: space-around;
       }
+      .top{
+        height: 49%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        background-color: rgb(124, 124, 123);
+      }
+      .bottom{
+        height: 49%;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        background-color: rgb(124, 124, 123);
+      }
+      p{
+        z-index: 2;
+
+      }
     </style>
   </head>
   <body>
     <h1>Digital Clock</h1>
     <section>
-      <div class="number-column"><p id="hour-pos1">0</p></div>
-      <div class="number-column"><p id="hour-pos2">0</p></div>
+      <div class="number-column"><p id="hour-pos1">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </p></div>
+      <div class="number-column"><p id="hour-pos2">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </p></div>
       <div class="dot-container">
         <div class="dot"></div>
         <div class="dot"></div>
       </div>
-      <div class="number-column"><p id="min-pos1">0</p></div>
-      <div class="number-column"><p id="min-pos2">0</p></div>
+      <div class="number-column"><p id="min-pos1">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </p></div>
+      <div class="number-column"><p id="min-pos2">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </p></div>
       <div class="dot-container">
         <div class="dot"></div>
         <div class="dot"></div>
       </div>
-      <div class="number-column"><p id="sec-pos1">0</p></div>
-      <div class="number-column"><p id="sec-pos2">0</p></div>
+      <div class="number-column"><p id="sec-pos1">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </p></div>
+      <div class="number-column"><p id="sec-pos2">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </p></div>
     </section>
     <script>
       function updateTime() {
