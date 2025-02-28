@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Digital Clock</title>
+    <title>Document</title>
     <style>
       * {
         font-family: sans-serif;
@@ -32,7 +32,6 @@
       }
 
       .number-column {
-        position: relative;
         background-color: rgb(205, 205, 205);
         color: rgb(45, 47, 46);
         font-size: 165px;
@@ -44,7 +43,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
       }
       .dot-container {
         display: flex;
@@ -52,129 +50,45 @@
         flex-direction: column;
         justify-content: space-around;
       }
-      .flip-container {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        perspective: 500px;
-      }
-      .top,
-      .bottom {
-        position: absolute;
-        width: 100%;
-        height: 50%;
-        background-color: rgb(124, 124, 123);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .top {
-        top: 0;
-        transform-origin: bottom;
-      }
-      .bottom {
-        bottom: 0;
-        transform-origin: top;
-        /* transform: rotateX(90deg); */
-      }
-
-      @keyframes flipTop {
-        0% {
-          transform: rotateX(0deg);
-        }
-        100% {
-          transform: rotateX(-90deg);
-        }
-      }
-
-      @keyframes flipBottom {
-        0% {
-          transform: rotateX(90deg);
-        }
-        100% {
-          transform: rotateX(0deg);
-        }
-      }
-
-      .top.flip {
-        animation: flipTop 0.3s linear forwards;
-      }
-
-      .bottom.flip {
-        animation: flipBottom 0.3s linear forwards;
-      }
     </style>
   </head>
   <body>
     <h1>Digital Clock</h1>
     <section>
-      <div class="number-column">
-        <div id="hour-pos1" class="flip-container"></div>
-      </div>
-      <div class="number-column">
-        <div id="hour-pos2" class="flip-container"></div>
-      </div>
+      <div class="number-column"><p id="hour-pos1">0</p></div>
+      <div class="number-column"><p id="hour-pos2">0</p></div>
       <div class="dot-container">
         <div class="dot"></div>
         <div class="dot"></div>
       </div>
-      <div class="number-column">
-        <div id="min-pos1" class="flip-container"></div>
-      </div>
-      <div class="number-column">
-        <div id="min-pos2" class="flip-container"></div>
-      </div>
+      <div class="number-column"><p id="min-pos1">0</p></div>
+      <div class="number-column"><p id="min-pos2">0</p></div>
       <div class="dot-container">
         <div class="dot"></div>
         <div class="dot"></div>
       </div>
-      <div class="number-column">
-        <div id="sec-pos1" class="flip-container"></div>
-      </div>
-      <div class="number-column">
-        <div id="sec-pos2" class="flip-container"></div>
-      </div>
+      <div class="number-column"><p id="sec-pos1">0</p></div>
+      <div class="number-column"><p id="sec-pos2">0</p></div>
     </section>
     <script>
       function updateTime() {
         const now = new Date();
+
         const hours = now.getHours();
         const minutes = now.getMinutes();
         const seconds = now.getSeconds();
 
-        updateDigit("hour-pos1", Math.floor(hours / 10));
-        updateDigit("hour-pos2", hours % 10);
-        updateDigit("min-pos1", Math.floor(minutes / 10));
-        updateDigit("min-pos2", minutes % 10);
-        updateDigit("sec-pos1", Math.floor(seconds / 10));
-        updateDigit("sec-pos2", seconds % 10);
+        document.getElementById("hour-pos1").innerText = Math.floor(hours / 10);
+        document.getElementById("hour-pos2").innerText = hours % 10;
+        document.getElementById("min-pos1").innerText = Math.floor(
+          minutes / 10
+        );
+        document.getElementById("min-pos2").innerText = minutes % 10;
+        document.getElementById("sec-pos1").innerText = Math.floor(
+          seconds / 10
+        );
+        document.getElementById("sec-pos2").innerText = seconds % 10;
       }
-
-      function updateDigit(id, newValue) {
-        const element = document.getElementById(id);
-
-        if (element.innerText == newValue) return;
-
-        element.innerText = newValue;
-        console.log(newValue)
-        element.innerHTML = `<p id = "num-pos">
-          <div class="top"></div>
-          <div class="bottom"></div>
-          </p>
-        `;
-        element.querySelector("#num-pos").in = newValue;
-        const top = element.querySelector(".top");
-        const bottom = element.querySelector(".bottom");
-
-        top.classList.add("flip");
-        bottom.classList.add("flip");
-
-        setTimeout(() => {
-          top.classList.remove("flip");
-          bottom.classList.remove("flip");
-        }, 600); // Remove flip class after animation ends
-      }
-
       setInterval(updateTime, 1000);
     </script>
   </body>
